@@ -1,5 +1,6 @@
 package com.example.bk.informationorganizer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  */
 
 public class CompanyDaoImp implements CompanyDao {
-    public static List<CompanyModel> testList;
+    public static ArrayList<CompanyModel> companyList;
 
 
     public static CompanyDaoImp onlyCompanyDaoInstance = new CompanyDaoImp();
@@ -25,20 +26,14 @@ public class CompanyDaoImp implements CompanyDao {
     }
 
     public void createCompany(String name, String stock, String url){
-        CompanyModel test1 = new CompanyModel(name, stock, url);
-        testList.add(test1);
+        CompanyModel company = new CompanyModel(name, stock, url);
+        companyList = new ArrayList<CompanyModel>();
+        companyList.add(company);
 
 
     }
 
 
-
-    @Override
-    public void addCompany(CompanyModel companyModel) {
-
-
-
-    }
 
     @Override
     public void deleteCompany() {
@@ -51,7 +46,8 @@ public class CompanyDaoImp implements CompanyDao {
     }
 
     @Override
-    public List<CompanyModel> getAllCompanies() {
-        return null;
+    public List<CompanyModel> getAllCompanies()
+    {
+        return companyList;
     }
 }
