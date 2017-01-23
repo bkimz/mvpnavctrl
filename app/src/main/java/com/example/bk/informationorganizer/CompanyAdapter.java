@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.bk.informationorganizer.Models.CompanyModel;
+import com.example.bk.informationorganizer.DataAccessObj.CompanyDao;
+import com.example.bk.informationorganizer.DataAccessObj.CompanyDaoImp;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -49,7 +52,7 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHold
         CompanyModel companyModel1 = dao.getAllCompanies().get(position);
 
 
-        holder.companyTextView.setText(companyModel1.getCompName());
+        holder.companyTextView.setText(companyModel1.getCompName() + " (" +companyModel1.getCompTicker()+")");
         holder.priceTextView.setText(companyModel1.getCompPrice());
 
         Picasso.with(context)

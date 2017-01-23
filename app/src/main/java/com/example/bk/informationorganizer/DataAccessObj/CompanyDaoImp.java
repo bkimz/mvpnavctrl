@@ -1,4 +1,6 @@
-package com.example.bk.informationorganizer;
+package com.example.bk.informationorganizer.DataAccessObj;
+
+import com.example.bk.informationorganizer.Models.CompanyModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.List;
  */
 
 public class CompanyDaoImp implements CompanyDao {
-    public static ArrayList<CompanyModel> companyList;
+    public static ArrayList<CompanyModel> companyList = new ArrayList<CompanyModel>();
 
 
     public static CompanyDaoImp onlyCompanyDaoInstance = new CompanyDaoImp();
@@ -25,10 +27,10 @@ public class CompanyDaoImp implements CompanyDao {
 
     }
 
-    public void createCompany(String name, String stock, String url){
-        CompanyModel company = new CompanyModel(name, stock, url);
-        companyList = new ArrayList<CompanyModel>();
-        companyList.add(company);
+    public void createCompany(String name, String stock, String url, String companyobjname){
+        // Note need to make it so that each company created has a unique name
+        CompanyModel companyobjectname = new CompanyModel(name, stock, url);
+        companyList.add(companyobjectname);
 
 
     }
