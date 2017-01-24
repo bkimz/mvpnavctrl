@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bk.informationorganizer.Models.CompanyModel;
 import com.example.bk.informationorganizer.DataAccessObj.CompanyDao;
 import com.example.bk.informationorganizer.DataAccessObj.CompanyDaoImp;
+import com.example.bk.informationorganizer.Models.CompanyModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.List;
 
 public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHolder> {
 
-    private List<CompanyModel> companyModels;
+    List<CompanyModel> companyModels;
     private Context context;
     CompanyDao dao;
 
@@ -69,6 +69,14 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHold
                 //companyModels.size();
     }
 
+
+    public void swapData(List<CompanyModel> companyModels){
+        //added this to try to fix the adapter only displaying one company
+        companyModels.clear();
+        companyModels.addAll(companyModels);
+        notifyDataSetChanged();
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView companyTextView;
         public TextView priceTextView;
@@ -81,4 +89,6 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHold
             companyImageView = (ImageView) itemView.findViewById(R.id.iv_company);
         }
     }
+
+
 }
