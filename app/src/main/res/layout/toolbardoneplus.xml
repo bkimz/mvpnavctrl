@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/themeGreen"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/doneButton"
+        android:text="@string/btn_done"
+        android:textSize="14sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="@color/white"
+        android:layout_gravity="left"
+
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plusButton"
+        android:src="@drawable/btnnavadd"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_gravity="right"
+        android:paddingRight="16dp"
+        />
+
+</android.support.v7.widget.Toolbar>
+

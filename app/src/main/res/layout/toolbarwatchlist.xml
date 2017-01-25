@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/themeGreen"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    android:id="@+id/editPlusToolbar"
+    >
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/empty_title"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="18dp"-->
+        <!--android:id="@+id/toolbar_title" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addcompany_toolbar_title"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:id="@+id/toolbar_title_watchlist" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editButton"
+        android:text="@string/btn_edit"
+        android:textSize="14sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="@color/white"
+        android:layout_gravity="left"
+
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plusButton"
+        android:src="@drawable/btnnavadd"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_gravity="right"
+        android:paddingRight="16dp"
+        />
+
+</android.support.v7.widget.Toolbar>
