@@ -34,6 +34,7 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHold
     @Override
    // This method will be called whenever our ViewHolder is created. When an instance of below ViewHolder class is created.
     public CompanyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.company_list_row, parent, false);
 
@@ -63,19 +64,11 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-
         //replaced companyModels.size with dao.getallcompanies.size();
         return dao.getAllCompanies().size();
                 //companyModels.size();
     }
 
-
-    public void swapData(List<CompanyModel> companyModels){
-        //added this to try to fix the adapter only displaying one company
-        companyModels.clear();
-        companyModels.addAll(companyModels);
-        notifyDataSetChanged();
-    }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView companyTextView;

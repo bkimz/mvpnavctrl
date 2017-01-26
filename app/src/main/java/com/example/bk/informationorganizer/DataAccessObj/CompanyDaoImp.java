@@ -10,6 +10,7 @@ import java.util.List;
  */
 
 public class CompanyDaoImp implements CompanyDao {
+
     public static ArrayList<CompanyModel> companyList = new ArrayList<CompanyModel>();
 
 
@@ -31,7 +32,6 @@ public class CompanyDaoImp implements CompanyDao {
         // Note need to make it so that each company created has a unique name
         CompanyModel companyobjectname = new CompanyModel(name, stock, url);
         companyList.add(companyobjectname);
-
 
     }
 

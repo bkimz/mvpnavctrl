@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbarnocompany"
+        android:id="@+id/editPlusToolbar"></include>
+
+    <ImageView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/emptystatehomeview"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+        >
+    </ImageView>
+    <TextView
+        android:id="@+id/blankstate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="85dp"
+        android:text="@string/blank_state"
+        android:textColor="@color/textGrey"
+        android:textSize="18dp"
+        android:paddingTop="32dp"
+        />
+    <TextView
+        android:id="@+id/blankstate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blank_state2"
+        android:textColor="@color/textGrey"
+        android:textSize="18dp"
+        android:paddingLeft="130dp"
+        />
+    <Button
+        android:id="@+id/addcompanybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_add_company"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="@color/buttonBlue"
+        android:paddingLeft="120dp"
+        android:paddingTop="20dp"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+
+        />
+</LinearLayout>

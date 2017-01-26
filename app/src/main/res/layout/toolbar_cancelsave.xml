@@ -5,18 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/themeGreen"
     app:contentInsetLeft="0dp"
-    app:contentInsetStart="0dp"
-    android:id="@+id/editPlusToolbar"
-    >
+    app:contentInsetStart="0dp">
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/empty_title"-->
-        <!--android:layout_gravity="center"-->
-        <!--android:textColor="@color/white"-->
-        <!--android:textSize="18dp"-->
-        <!--android:id="@+id/toolbar_title" />-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,15 +15,14 @@
         android:layout_gravity="center"
         android:textColor="@color/white"
         android:textSize="18dp"
-        android:id="@+id/toolbar_title_watchlist" />
-
+        android:id="@+id/toolbar_title_addcompmany" />
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editButton"
-        android:text="@string/btn_edit"
+        android:id="@+id/cancelButton"
+        android:text="@string/btn_cancel"
         android:textSize="14sp"
         android:background="?android:attr/selectableItemBackground"
         android:textColor="@color/white"
@@ -41,14 +30,16 @@
 
         />
 
-    <ImageButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/plusButton"
-        android:src="@drawable/btnnavadd"
+        android:id="@+id/saveButton"
+        android:text="@string/btn_save"
         android:background="?android:attr/selectableItemBackground"
         android:layout_gravity="right"
         android:paddingRight="16dp"
+        android:textColor="@color/white"
         />
 
 </android.support.v7.widget.Toolbar>
+
